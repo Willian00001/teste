@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Profissional de Willian Martins Cruz</title>
+    <!-- Meta description for SEO -->
+    <meta name="description" content="Portfólio profissional de Willian Martins Cruz: eletrônica, mecânica de precisão, pedagogia, automação e desenvolvimento de projetos.">
+    <!-- Includes Tailwind CSS for responsive and modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- AOS (Animate On Scroll) CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        /* Defines the Inter font for the entire document body */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Soft background color */
+            color: #334155; /* Default text color */
+        }
+        /* Styles for smooth scrolling when clicking navigation links */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Style for primary buttons */
+        .btn-primary {
+            @apply bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        /* Style for secondary buttons */
+        .btn-secondary {
+            @apply bg-gray-200 text-gray-800 px-6 py-3 rounded-full shadow-md hover:bg-gray-300 transition duration-300 ease-in-out transform hover:scale-105;
+        }
+        /* Style for project cards */
+        .project-card {
+            @apply bg-white rounded-lg shadow-lg p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105;
+        }
+        /* Style for icons (example, can be replaced by Font Awesome or Lucide React) */
+        .icon {
+            @apply w-12 h-12 mb-4 text-blue-600;
+        }
+        /* Style for the scroll-to-top button */
+        #scroll-to-top-btn {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background-color: #3b82f6; /* blue-500 */
+            color: white;
+            padding: 0.75rem 1rem;
+            border-radius: 9999px; /* fully rounded */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+            display: none; /* Hidden by default */
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+        }
+        #scroll-to-top-btn:hover {
+            background-color: #2563eb; /* blue-600 */
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header and Navigation -->
+    <header class="bg-white shadow-sm py-4 fixed w-full z-10">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#apresentacao" class="text-2xl font-bold text-blue-600" data-lang-key="headerName">Willian M. Cruz</a>
+            <div class="flex items-center space-x-6">
+                <ul class="hidden md:flex space-x-6">
+                    <li><a href="#apresentacao" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navPresentation">Apresentação</a></li>
+                    <li><a href="#formacao" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navFormation">Formação</a></li>
+                    <li><a href="#experiencia" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navExperience">Vivência Profissional</a></li>
+                    <li><a href="#projetos-pessoais" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navPersonalProjects">Projetos Pessoais</a></li>
+                    <li><a href="#projetos-profissionais" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navProfessionalProjects">Projetos Profissionais</a></li>
+                    <li><a href="#contato" class="text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navContact">Contato</a></li>
+                </ul>
+                <!-- Language toggle button -->
+                <button id="language-toggle" class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold hover:bg-blue-200 transition-colors">EN / PT</button>
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 hover:text-blue-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2 mt-2">
+            <ul class="flex flex-col items-center space-y-2">
+                <li><a href="#apresentacao" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navPresentation" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Apresentação</a></li>
+                <li><a href="#formacao" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navFormation" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Formação</a></li>
+                <li><a href="#experiencia" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navExperience" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Vivência Profissional</a></li>
+                <li><a href="#projetos-pessoais" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navPersonalProjects" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projetos Pessoais</a></li>
+                <li><a href="#projetos-profissionais" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navProfessionalProjects" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Projetos Profissionais</a></li>
+                <li><a href="#contato" class="block py-2 text-gray-600 hover:text-blue-600 transition-colors" data-lang-key="navContact" onclick="document.getElementById('mobile-menu').classList.add('hidden')">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <!-- Presentation Section (Hero Section) -->
+        <section id="apresentacao" class="relative bg-gradient-to-r from-blue-500 to-blue-700 text-white py-20 md:py-24 flex items-center justify-center min-h-0">
+            <div class="container mx-auto px-4 text-center pt-10">
+                <div class="flex flex-col md:flex-row items-center justify-center md:space-x-8">
+                    <!-- Profile image -->
+                    <div class="mb-8 md:mb-0" data-aos="fade-right">
+                        <img src="https://placehold.co/200x200/007bff/ffffff?text=WM" alt="Foto de Perfil de Willian Martins Cruz" class="w-48 h-48 rounded-full border-4 border-white shadow-xl object-cover">
+                    </div>
+                    <!-- Presentation text -->
+                    <div>
+                        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 animate-fade-in-down" data-lang-key="heroTitle">Olá, eu sou Willian Martins Cruz</h1>
+                        <p class="text-xl md:text-2xl mb-8 animate-fade-in-up" data-lang-key="heroSubtitle">Profissional Multidisciplinar | Tecnologia, Educação e Engenharia</p>
+                        <div class="flex justify-center space-x-4 animate-fade-in">
+                            <a href="#projetos-profissionais" class="btn-primary" data-lang-key="heroBtnProjects">Ver Projetos</a>
+                            <a href="#contato" class="btn-secondary" data-lang-key="heroBtnContact">Entre em Contato</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section / Detailed Presentation -->
+        <section id="sobre-mim" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="aboutMeTitle">Sobre Mim</h2>
+                <div class="max-w-4xl mx-auto text-lg leading-relaxed text-gray-700">
+                    <p class="mb-6" data-lang-key="aboutMeP0">
+                        Minha jornada é impulsionada pela fusão da eletrônica e da pedagogia, criando soluções tecnológicas que também educam e transformam.
+                    </p>
+                    <p class="mb-6" data-lang-key="aboutMeP1">
+                        Sou um profissional apaixonado por **tecnologia, educação e inovação**, com uma sólida formação multidisciplinar em **eletrônica, mecânica de precisão e pedagogia**. Minha jornada profissional tem sido guiada pela busca incessante por soluções eficientes, o desenvolvimento de projetos complexos e a **capacitação de novos talentos**.
+                    </p>
+                    <p class="mb-6" data-lang-key="aboutMeP2">
+                        Minha abordagem se baseia em **pensamento sistêmico, aprendizado contínuo e aplicação prática do conhecimento**. Acredito que a combinação de **habilidades técnicas e pedagógicas** me permite atuar de forma abrangente, desde o desenvolvimento de sistemas até a formação de equipes.
+                    </p>
+                    <p class="mb-6" data-lang-key="aboutMeP3">
+                        Tenho proficiência em:
+                        <ul class="list-disc list-inside mt-2 ml-4">
+                            <li><strong data-lang-key="aboutMeHardSkills">Hard Skills:</strong> Eletrônica, Mecânica de Precisão, Programação (C, C#, Python, Micropython, Delphi), Desenvolvimento Web (HTML), Automação (Arduino, ESP32, Raspberry, CLP, FluidSim, Proteus, IoT), Design (AutoCAD, Fusion, Revit), Metodologias Ágeis (Scrum, Git), Power BI, Ferramentas de Escritório (Windows, Word, Excel, PowerPoint, Access), Digitalização.<br></li>
+                            <li><strong data-lang-key="aboutMeSoftSkills">Soft Skills:</strong> Comunicação eficaz, Resolução de problemas, Trabalho em equipe, Adaptabilidade, Liderança, Pensamento Crítico, Capacitação, Didática.</li>
+                        </ul>
+                    </p>
+                    <p data-lang-key="aboutMeP4">
+                        Meu objetivo é **aplicar meu conhecimento técnico e pedagógico no desenvolvimento de soluções inovadoras e na formação de profissionais**, contribuindo para o avanço tecnológico e educacional.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Academic Background Section -->
+        <section id="formacao" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="formationTitle">Minha Formação</h2>
+                <div class="max-w-4xl mx-auto space-y-10">
+
+                    <!-- Higher Education and Licensures -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-lang-key="formationHigherEducationTitle">Ensino Superior e Licenciaturas</h3>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationPedagogyDegree">Licenciado em Pedagogia</span> - UNIVESP (2018 - 2023) - 3640h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationPedagogicalTraining">Programa Especial de Formação Pedagógica de Docentes para a Educação Profissional de Nível Médio</span> - Centro Paula Souza (2015) - <span data-lang-key="formationFullLicensure">Licenciatura Plena</span> - 540h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationPrecisionMechanics">Curso Superior de Tecnologia em Mecânica de Precisão</span> - FATEC-SP (2010 - 2013) - 3100h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationInformaticsEducation">Pós Graduação Lato Sensu em Informática na Educação</span> - (2019) - 420h
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Technical and Basic Education -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-lang-key="formationTechnicalBasicTitle">Ensino Técnico e Básico</h3>
+                        <ul class="list-disc list-inside space-y-3 text-gray-700">
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElectronicsTechnical">Habilitação Profissional Técnica de Nível Médio em Eletrônica</span> - ETEC Guaracy Silveira (2008) - 1500h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElectronicsTechnician">Técnico em Eletrônica</span> - ETEC Guaracy Silveira (2008)
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElectronicCircuits">Operador e Reparador de Circuitos Eletrônicos</span> - ETEC Guaracy Silveira (2008) - 500h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElectroElectronicSystems">Montador e Instalador de Sistemas Eletroeletrônicos</span> - ETEC Guaracy Silveira (2007) - 500h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationHighSchool">Ensino Médio Completo</span> - E.E Prof Eulália Malta (2008) - 3600h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElementaryCycle2">Ensino Fundamental - CICLO II</span> - E.E.Professora Eulália Malta (2005) - 4120h
+                            </li>
+                            <li>
+                                <span class="font-semibold" data-lang-key="formationElementaryCycle1">Ensino Fundamental - CICLO I</span> - EMEF DR. Iodoque Rosa (2001) - 3800h
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Specialization Courses and Certifications -->
+                    <div class="bg-white rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4" data-lang-key="formationSpecializationTitle">Cursos de Especialização e Certificações</h3>
+                        <div class="space-y-4">
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600 mb-2" data-lang-key="formationProgrammingTitle">Programação e Desenvolvimento</h4>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li><span data-lang-key="progCsharpEsp32">Programação C# com ESP32</span> (2024) - 60h</li>
+                                    <li><span data-lang-key="progNodeRedClp">Introdução ao NODE-RED com comunicação com profinet para CLP S7 - 1200</span> (2024) - 40h</li>
+                                    <li><span data-lang-key="progNodeRedCloud">Utilização do Node-Red para envio de dados à nuvem com CLP S7-1200</span> (2024) - 40h</li>
+                                    <li><span data-lang-key="progPython">Lógica de Programação com ênfase em Python</span> (2019, 2020) - 40h cada</li>
+                                    <li><span data-lang-key="progEmbeddedEsp32">Sistema Embarcado com ESP32 e Micropython</span> (2020) - 40h</li>
+                                    <li><span data-lang-key="progDelphiArduino">Programação Delphi com Arduino e ESP32</span> (2020) - 40h</li>
+                                    <li><span data-lang-key="progMicropythonEsp32">Introdução a Micropython com ESP32</span> (2021)</li>
+                                    <li><span data-lang-key="progBlocksArduino">Programação em Blocos com Arduino</span> (2021) - 40h</li>
+                                    <li><span data-lang-key="progPyboard">Simulador PyBoard com Micropython</span> (2021) - 40h</li>
+                                    <li><span data-lang-key="progLogicC">Capacitação em Lógica de Programação Linguagem C</span> (2017) - 40h</li>
+                                    <li><span data-lang-key="progLogicCsharp">Capacitação em Lógica de Programação Linguagem C#</span> (2017) - 40h</li>
+                                    <li><span data-lang-key="progHtmlAccess">HTML, FontPage, Access, Digitalização, Internet</span> (2007)</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600 mb-2" data-lang-key="formationAutomationTitle">Automação e Eletrônica</h4>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li><span data-lang-key="autoArduinoClp">Utilização e Programação da plataforma Arduino como CLP</span> (2023) - 40h</li>
+                                    <li><span data-lang-key="autoPsim">Capacitação na Utilização do Software PSIM na Eletrônica de Potência</span> (2022, 2024) - 40h cada</li>
+                                    <li><span data-lang-key="autoIotTech">Introdução às técnicas e tecnologias de IoT (Internet das Coisas)</span> (2022, 2024) - 50h cada</li>
+                                    <li><span data-lang-key="autoArduinoClpTransform">Capacitação em Montagem e Transformação da plataforma ARDUINO em CLP Turma A</span> (2022) - 40h</li>
+                                    <li><span data-lang-key="autoFinder">Capacitação em Automação Predial Finder</span> (2021) - 40h</li>
+                                    <li><span data-lang-key="autoArduinoIntro">Introdução a programação com Arduino</span> (2017) - 60h</li>
+                                    <li><span data-lang-key="autoIotArduino">Capacitação em IOT com Arduino</span> (2017) - 40h</li>
+                                    <li><span data-lang-key="autoFluidSimIntro">Introdução ao FluidSim V.3.6</span> (2017) - 40h</li>
+                                    <li><span data-lang-key="autoFluidSimDiagram">Automação Utilizando Diagrama de Blocos através do Software FluidSim Festo</span> (2017) - 40h</li>
+                                    <li><span data-lang-key="autoFluidSimElectro">Simulação de Circuitos Eletropneumáticos no Software FluidSim Festo</span> (2017) - 60h</li>
+                                    <li><span data-lang-key="autoProteus">Proteus ISIS - Schematic Capture</span> (2017) - 120h</li>
+                                    <li><span data-lang-key="autoEsp32FirstSteps">Primeiros passos com ESP32</span> (2020) - 40h</li>
+                                    <li><span data-lang-key="autoRaspberryProjects">Capacitação em Desenvolvimento de Projetos com Raspberry - PBP</span> (2019) - 40h</li>
+                                    <li><span data-lang-key="autoRaspberryIntro">Introdução à Plataforma Raspberry</span> (2021) - 40h</li>
+                                    <li><span data-lang-key="autoElectricInstallations">Instalações elétricas básico - turma A</span> (2023) - 60h</li>
+                                    <li><span data-lang-key="autoCasioCalculator">Utilização de Calculadora Casio para área elétrica</span> (2024) - 40h</li>
+                                    <li><span data-lang-key="autoSchneiderElectric">Capacitação Schneider Eletric Turma C</span> (2024) - 16h</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600 mb-2" data-lang-key="formationDesignEngineeringTitle">Design e Engenharia</h4>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li><span data-lang-key="designEasyEda">Capacitação na utilização do Aplicativo EasyEda</span> (2024) - 40h</li>
+                                    <li><span data-lang-key="design3dPrintersSoftware">Softwares para impressoras 3D nas Etecs</span> (2024) - 60h</li>
+                                    <li><span data-lang-key="design3dPrinterTraining">Treinamento - Impressora 3D - Cliever - Turma C</span> (2022) - 8h</li>
+                                    <li><span data-lang-key="designRevitBasic">Autodesk Revit básico</span> (2022) - 60h</li>
+                                    <li><span data-lang-key="designAutocadBasic">Autodesk Autocad - básico</span> (2019) - 80h</li>
+                                    <li><span data-lang-key="designAutocad2d">Autocad 2016 2D Online</span> (2016) - 40h</li>
+                                    <li><span data-lang-key="designAutocadCapacitation">Capacitação em Autocad</span> (2016) - 40h</li>
+                                    <li><span data-lang-key="designFusionOnline">Fusion Online</span> (2016, 2017) - 36h cada</li>
+                                    <li><span data-lang-key="designRobotMiniSumo">Capacitação em Design de Robô - Modalidade Mini-Sumô</span> (2020) - 40h</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600 mb-2" data-lang-key="formationMethodologiesToolsTitle">Metodologias e Ferramentas</h4>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li><span data-lang-key="toolsPowerBI">Introdução ao Microsoft Power BI</span> (2023) - 50h</li>
+                                    <li><span data-lang-key="toolsRemoteWork">Como Trabalhar Remotamente: Boas Práticas de Home-Office</span> (2020) - 20h</li>
+                                    <li><span data-lang-key="toolsOnlineActivities">Utilização de programa livre para criar, publicar e corrigir atividades online</span> (2015) - 30h</li>
+                                    <li><span data-lang-key="toolsGit">Versionamento de Código (Git)</span> (2014)</li>
+                                    <li><span data-lang-key="toolsScrum">Metodologias Ágeis (Scrum)</span> (2014)</li>
+                                    <li><span data-lang-key="toolsStartupSchools">Projeto Startup in Schools</span> (2016) - 24h</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-semibold text-blue-600 mb-2" data-lang-key="formationOtherTitle">Outros</h4>
+                                <ul class="list-disc list-inside ml-4 space-y-1 text-gray-700">
+                                    <li><span data-lang-key="otherNr10Recycle">Segurança em Instalações e Serviço com Eletricidade - NR10 Reciclagem</span> (2018) - 20h</li>
+                                    <li><span data-lang-key="otherNr10Basic">NR10 - Segurança em Instalações e Serviços em Eletricidade Módulo Básico</span> (2016) - 40h</li>
+                                    <li><span data-lang-key="otherEnglish">Curso de inglês - "English Online - EOL módulo 2"</span> (2019) - 40h</li>
+                                    <li><span data-lang-key="otherAuxiliaryTeacherCapacitation">I Capacitação de Auxiliar de Docente</span> (2012) - 6h</li>
+                                    <li><span data-lang-key="otherPreVestibular">Cursinho pré vestibular - ETAPA</span> (2009)</li>
+                                    <li><span data-lang-key="otherMicroWorldHours">Horas de Aulas Prestadas 300h e Horas de Estágio 1000h - Micro World Informática</span> (2007)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Experience Section -->
+        <section id="experiencia" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="experienceTitle">Vivência Profissional</h2>
+                <div class="max-w-4xl mx-auto space-y-10">
+                    <!-- Experience: Coordinator of the Electro-Electronic Technical Course - Etec de Embu -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expCoordElectroelectronicsTitle">Coordenador do Curso Técnico em Eletroeletrônica</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expCoordElectroelectronicsCompany">Etec de Embu | Fev de 2025 - o momento</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expCoordElectroelectronicsDesc">Atuação na coordenação do curso técnico, garantindo a qualidade do ensino e a gestão das atividades acadêmicas.</p>
+                    </article>
+
+                    <!-- Experience: Professor in Electro-Electronics - Etec de Embu -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expProfElectroelectronicsTitle">Professor em Eletroeletrônica</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expProfElectroelectronicsCompany">Etec de Embu | Jan de 2016 - o momento</p>
+                        <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                            <li data-lang-key="expProfElectroelectronicsResp1">Planejamento e execução da instalação e manutenção preventiva, preditiva e corretiva de equipamentos e instalações eletroeletrônicas industriais.</li>
+                            <li data-lang-key="expProfElectroelectronicsResp2">Projeto e instalação de sistemas de acionamento, automação e controle eletroeletrônicos.</li>
+                            <li data-lang-key="expProfElectroelectronicsResp3">Realização de medições e testes, além de elaboração, desenvolvimento e execução de projetos de instalações elétricas em edificações em baixa tensão.</li>
+                            <li data-lang-key="expProfElectroelectronicsResp4">Trabalho em conformidade com normas e procedimentos técnicos e de qualidade, segurança, higiene, saúde e preservação ambiental.</li>
+                            <li data-lang-key="expProfElectroelectronicsResp5">Proposição do uso eficiente da energia elétrica e elaboração de documentação técnica.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Experience: Professor in Industrial Automation Course - Etec de Embu -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expProfAutomationTitle">Professor no Curso de Automação Industrial</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expProfAutomationCompany">Etec de Embu | Fev de 2020 - Jul de 2024</p>
+                        <ul class="list-disc list-inside mt-4 text-gray-700 space-y-2">
+                            <li data-lang-key="expProfAutomationResp1">Ensino de formação técnica em Automação Industrial integrada ao Ensino Médio.</li>
+                            <li data-lang-key="expProfAutomationResp2">Capacitação de alunos para projetar, instalar, programar, integrar e realizar manutenção em sistemas aplicados à automação e controle de processos industriais.</li>
+                            <li data-lang-key="expProfAutomationResp3">Análise de especificações de componentes e equipamentos de sistemas automatizados.</li>
+                            <li data-lang-key="expProfAutomationResp4">Coordenação de equipes de trabalho e avaliação da qualidade dos dispositivos e sistemas automatizados.</li>
+                            <li data-lang-key="expProfAutomationResp5">Programação, operação e manutenção de sistemas automatizados, respeitando normas técnicas de segurança.</li>
+                        </ul>
+                    </article>
+
+                    <!-- Experience: Coordinator of NovoTec Course in Industrial Automation - Etec de Embu -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expCoordNovoTecTitle">Coordenador de Curso NovoTec em Automação Industrial</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expCoordNovoTecCompany">Etec de Embu | Fev de 2021 - Jan de 2023</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expCoordNovoTecDesc">Gestão e coordenação do programa NovoTec, focado na formação em Automação Industrial.</p>
+                    </article>
+
+                    <!-- Experience: Laboratory Coordinator - Etec de Embu -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expCoordLabEmbuTitle">Coordenador de Laboratório</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expCoordLabEmbuCompany">Etec de Embu | Fev de 2020 - Fev de 2021</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expCoordLabEmbuDesc">Organização, planejamento e execução de projetos voltados para o setor acadêmico e gestão de materiais de laboratório.</p>
+                    </article>
+
+                    <!-- Experience: Auxiliary Teacher - Centro Paula Souza (Etec de Embu) -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expAuxDocenteEmbuTitle">Auxiliar Docente</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expAuxDocenteEmbuCompany">Centro Paula Souza (Etec de Embu) | Fev de 2020 - o momento</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expAuxDocenteEmbuDesc">Suporte às atividades de ensino, utilizando técnicas administrativas, experiência em sistemas elétricos e eletrônicos, manutenção de equipamentos, elaboração de laboratórios e noções de aulas expositivas.</p>
+                    </article>
+
+                    <!-- Experience: Executive Director - APM - Parents and Teachers Association of ETEC Guaracy Silveira -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expDirectorAPMTitle">Diretor Executivo - APM</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expDirectorAPMCompany">Associação de Pais e Mestres da ETEC Guaracy Silveira | Jan de 2018 - Mai de 2022</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expDirectorAPMDesc">Responsável pela finalização de atas e outras atividades executivas da associação.</p>
+                    </article>
+
+                    <!-- Experience: Professor - ETEC Guaracy Silveira -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expProfGuaracyTitle">Professor</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expProfGuaracyCompany">ETEC Guaracy Silveira | Mai de 2014 - Fev de 2020</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expProfGuaracyDesc">Professor do Ensino Técnico Integrado ao Médio em Eletrônica.</p>
+                    </article>
+
+                    <!-- Experience: Auxiliary Teacher - ETEC Guaracy Silveira -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expAuxDocenteGuaracyTitle">Auxiliar Docente</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expAuxDocenteGuaracyCompany">ETEC Guaracy Silveira | Jun de 2011 - Fev de 2020</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expAuxDocenteGuaracyDesc">Utilização de técnicas administrativas, experiência em sistemas elétricos e eletrônicos, manutenção de equipamentos, elaboração de laboratórios e noções de aulas expositivas.</p>
+                    </article>
+
+                    <!-- Experience: Laboratory Coordinator - ETEC Guaracy Silveira -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expCoordLabGuaracyTitle">Coordenador de Laboratório</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expCoordLabGuaracyCompany">ETEC Guaracy Silveira | Fev de 2015 - Dez de 2017</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expCoordLabGuaracyDesc">Gestão e organização dos materiais de laboratório.</p>
+                    </article>
+
+                    <!-- Experience: Internship Coordinator - ETEC Guaracy Silveira -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expCoordInternshipTitle">Coordenador de Estágio</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expCoordInternshipCompany">ETEC Guaracy Silveira | Jan de 2014 - Dez de 2015</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expCoordInternshipDesc">Coordenação e acompanhamento dos estágios dos alunos.</p>
+                    </article>
+
+                    <!-- Experience: Auxiliary Warehouse Technician - ETEC / Lins - Centro Paula Souza -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expWarehouseAssistantTitle">Técnico Auxiliar de Almoxarife</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expWarehouseAssistantCompany">ETEC / Lins - Centro Paula Souza | Mar de 2010 - Mai de 2011</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expWarehouseAssistantDesc">Desenvolvimento de sistemas administrativos, noções de elaboração de documentação e trabalho em equipe.</p>
+                    </article>
+
+                    <!-- Experience: Intern - ETEC / Lins - Centro Paula Souza -->
+                    <article class="bg-gray-50 rounded-lg shadow-md p-6 border-l-4 border-blue-600">
+                        <h3 class="text-2xl font-semibold text-gray-800" data-lang-key="expInternTitle">Estagiário</h3>
+                        <p class="text-blue-600 text-lg" data-lang-key="expInternCompany">ETEC / Lins - Centro Paula Souza | Jul de 2008 - Nov de 2008</p>
+                        <p class="text-gray-700 text-base mt-2" data-lang-key="expInternDesc">Noções em manutenção, utilização de técnicas de sistemas eletrônicos, sistemática no ambiente de trabalho, utilização de ensino adquirido em sala de aula e desenvolvimento de experiências acadêmicas.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Projects Section -->
+        <section id="projetos-pessoais" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-4" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="personalProjectsTitle">Meus Projetos Pessoais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Personal Project 1 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Sistema+IoT+Residencial" alt="Image of Personal Project: Residential IoT System" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="personalProject1Title">Sistema IoT Residencial</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="personalProject1Tech">Tecnologias: ESP32, Micropython, Node-RED, MQTT</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="personalProject1Desc">Desenvolvimento de um sistema de automação residencial utilizando ESP32 para controle de iluminação e monitoramento de temperatura via plataforma IoT. Aprendizado em comunicação sem fio e integração de hardware/software.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="personalProject1Link">Ver Detalhes &rarr;</a>
+                    </article>
+                    <!-- Personal Project 2 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Rob%C3%B4+Seguidor+de+Linha" alt="Image of Personal Project: Line Follower Robot" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="personalProject2Title">Robô Seguidor de Linha</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="personalProject2Tech">Tecnologias: Arduino, Sensores IR, Motores DC</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="personalProject2Desc">Construção de um robô autônomo capaz de seguir uma linha preta em uma superfície branca. Foco na lógica de programação para controle de motores e leitura de sensores, aprimorando habilidades em robótica básica.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="personalProject2Link">Ver Detalhes &rarr;</a>
+                    </article>
+                    <!-- Personal Project 3 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Estação+Meteorológica" alt="Image of Personal Project: Weather Station" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="personalProject3Title">Estação Meteorológica com Raspberry Pi</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="personalProject3Tech">Tecnologias: Raspberry Pi, Python, Sensores DHT11, BMP180</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="personalProject3Desc">Criação de uma estação meteorológica que coleta dados de temperatura, umidade e pressão. Os dados são armazenados e visualizados, explorando a capacidade do Raspberry Pi para projetos de coleta de dados.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="personalProject3Link">Ver Detalhes &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Professional Projects Section -->
+        <section id="projetos-profissionais" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="professionalProjectsTitle">Projetos Profissionais</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Professional Project 1 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Automação+Industrial" alt="Image of Professional Project: Industrial Automation" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="professionalProject1Title">Otimização de Processo Industrial</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="professionalProject1ClientPeriod">Cliente: Indústria X | Período: Mar/2022 - Ago/2023</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="professionalProject1Desc">Implementação de sistema de automação para otimizar a linha de produção, resultando em redução de 15% no tempo de ciclo e aumento de 10% na eficiência. Meu papel incluiu análise de requisitos, programação de CLP e supervisão da instalação.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="professionalProject1Link">Ver Case Study &rarr;</a>
+                    </article>
+                    <!-- Professional Project 2 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Desenvolvimento+de+Material+Didático" alt="Image of Professional Project: Didactic Material Development" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="professionalProject2Title">Desenvolvimento de Material Didático Interativo</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="professionalProject2ClientPeriod">Cliente: ETEC de Embu | Período: Jan/2021 - Dez/2021</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="professionalProject2Desc">Criação de módulos didáticos interativos para o curso técnico de Eletroeletrônica, utilizando simulações e exercícios práticos. A iniciativa melhorou o engajamento dos alunos em 20% e a compreensão de conceitos complexos.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="professionalProject2Link">Ver Detalhes &rarr;</a>
+                    </article>
+                    <!-- Professional Project 3 -->
+                    <article class="project-card">
+                        <img src="https://placehold.co/300x200/cccccc/333333?text=Consultoria+Técnica" alt="Image of Professional Project: Technical Consulting" class="w-full h-48 object-cover rounded-md mb-4 shadow-md" loading="lazy">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2" data-lang-key="professionalProject3Title">Consultoria Técnica em Eletrônica para Startup</h3>
+                        <p class="text-gray-600 text-sm mb-3" data-lang-key="professionalProject3ClientPeriod">Cliente: Startup ABC | Período: Set/2023 - Dez/2023</p>
+                        <p class="text-gray-700 text-base mb-4" data-lang-key="professionalProject3Desc">Prestação de consultoria para uma startup no desenvolvimento de um protótipo eletrônico, auxiliando na seleção de componentes, design de circuito e otimização de custos. Contribuição para o lançamento bem-sucedido do MVP.</p>
+                        <a href="#" class="text-blue-600 hover:underline font-medium" data-lang-key="professionalProject3Link">Ver Detalhes &rarr;</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contato" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-4 text-center" data-aos="fade-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800" data-lang-key="contactTitle">Entre em Contato</h2>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto" data-lang-key="contactIntro">
+                    Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me enviar uma mensagem!
+                </p>
+                <div class="max-w-xl mx-auto bg-white rounded-lg shadow-lg p-8">
+                    <form id="contact-form" action="#" method="POST" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-left text-gray-700 text-sm font-semibold mb-2" data-lang-key="contactNameLabel">Nome Completo</label>
+                            <input type="text" id="name" name="name" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Seu Nome" data-lang-key="contactNamePlaceholder" required>
+                        </div>
+                        <div>
+                            <label for="email" class="block text-left text-gray-700 text-sm font-semibold mb-2" data-lang-key="contactEmailLabel">Seu E-mail</label>
+                            <input type="email" id="email" name="email" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="seu.email@exemplo.com" data-lang-key="contactEmailPlaceholder" required>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-left text-gray-700 text-sm font-semibold mb-2" data-lang-key="contactSubjectLabel">Assunto</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none" placeholder="Assunto da Mensagem" data-lang-key="contactSubjectPlaceholder" required>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-left text-gray-700 text-sm font-semibold mb-2" data-lang-key="contactMessageLabel">Mensagem</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-y" placeholder="Sua mensagem..." data-lang-key="contactMessagePlaceholder" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full" data-lang-key="contactSubmitBtn">Enviar Mensagem</button>
+                    </form>
+                    <!-- Form feedback message -->
+                    <div id="form-message" class="mt-4 p-3 rounded-md text-sm hidden"></div>
+
+                    <div class="mt-8 text-gray-700">
+                        <p class="mb-2" data-lang-key="contactSocialMediaIntro">Ou me encontre nas redes sociais:</p>
+                        <div class="flex justify-center space-x-6 text-2xl">
+                            <!-- Social media icons (Font Awesome) -->
+                            <a href="https://linkedin.com/in/willian-martins-cruz-54449957" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="http://lattes.cnpq.br/8201575517382220" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" aria-label="Lattes">
+                                <i class="fab fa-linkedin"></i> <!-- Using LinkedIn icon for Lattes for simplicity, can be replaced by a custom icon if available -->
+                            </a>
+                            <a href="https://instagram.com/willianmartinscruz" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" aria-label="Instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@tecnologowillian" target="_blank" class="text-gray-600 hover:text-blue-600 transition-colors" aria-label="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <!-- Add more icons as needed -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Scroll to Top Button -->
+    <button id="scroll-to-top-btn" class="hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+        </svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p data-lang-key="footerCopyright">&copy; 2024 Willian Martins Cruz. Todos os direitos reservados.</p>
+            <p class="mt-2 text-sm" data-lang-key="footerMadeWith">Feito com <span class="text-red-500">&hearts;</span> e Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <!-- AOS (Animate On Scroll) JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, // Animation duration in ms
+            once: true,     // Animate only once when scrolling down
+        });
+
+        // Defines content in different languages
+        const translations = {
+            'pt': {
+                // Navigation
+                headerName: 'Willian M. Cruz',
+                navPresentation: 'Apresentação',
+                navFormation: 'Formação',
+                navExperience: 'Vivência Profissional',
+                navPersonalProjects: 'Projetos Pessoais',
+                navProfessionalProjects: 'Projetos Profissionais',
+                navContact: 'Contato',
+
+                // Presentation Section (Hero)
+                heroTitle: 'Olá, eu sou Willian Martins Cruz',
+                heroSubtitle: 'Profissional Multidisciplinar | Tecnologia, Educação e Engenharia',
+                heroBtnProjects: 'Ver Projetos',
+                heroBtnContact: 'Entre em Contato',
+
+                // About Me Section
+                aboutMeTitle: 'Sobre Mim',
+                aboutMeP0: 'Minha jornada é impulsionada pela fusão da eletrônica e da pedagogia, criando soluções tecnológicas que também educam e transformam.',
+                aboutMeP1: 'Sou um profissional apaixonado por **tecnologia, educação e inovação**, com uma sólida formação multidisciplinar em **eletrônica, mecânica de precisão e pedagogia**. Minha jornada profissional tem sido guiada pela busca incessante por soluções eficientes, o desenvolvimento de projetos complexos e a **capacitação de novos talentos**.',
+                aboutMeP2: 'Minha abordagem se baseia em **pensamento sistêmico, aprendizado contínuo e aplicação prática do conhecimento**. Acredito que a combinação de **habilidades técnicas e pedagógicas** me permite atuar de forma abrangente, desde o desenvolvimento de sistemas até a formação de equipes.',
+                aboutMeP3: 'Tenho proficiência em:',
+                aboutMeHardSkills: 'Hard Skills:',
+                aboutMeSoftSkills: 'Soft Skills:',
+                aboutMeP4: 'Meu objetivo é **aplicar meu conhecimento técnico e pedagógico no desenvolvimento de soluções inovadoras e na formação de profissionais**, contribuindo para o avanço tecnológico e educacional.',
+
+                // Academic Background Section
+                formationTitle: 'Minha Formação',
+                formationHigherEducationTitle: 'Ensino Superior e Licenciaturas',
+                formationPedagogyDegree: 'Licenciado em Pedagogia',
+                formationPedagogicalTraining: 'Programa Especial de Formação Pedagógica de Docentes para a Educação Profissional de Nível Médio',
+                formationFullLicensure: 'Licenciatura Plena',
+                formationPrecisionMechanics: 'Curso Superior de Tecnologia em Mecânica de Precisão',
+                formationInformaticsEducation: 'Pós Graduação Lato Sensu em Informática na Educação',
+                formationTechnicalBasicTitle: 'Ensino Técnico e Básico',
+                formationElectronicsTechnical: 'Habilitação Profissional Técnica de Nível Médio em Eletrônica',
+                formationElectronicsTechnician: 'Técnico em Eletrônica',
+                formationElectronicCircuits: 'Operador e Reparador de Circuitos Eletrônicos',
+                formationElectroElectronicSystems: 'Montador e Instalador de Sistemas Eletroeletrônicos',
+                formationHighSchool: 'Ensino Médio Completo',
+                formationElementaryCycle2: 'Ensino Fundamental - CICLO II',
+                formationElementaryCycle1: 'Ensino Fundamental - CICLO I',
+                formationSpecializationTitle: 'Cursos de Especialização e Certificações',
+                formationProgrammingTitle: 'Programação e Desenvolvimento',
+                progCsharpEsp32: 'Programação C# com ESP32',
+                progNodeRedClp: 'Introdução ao NODE-RED com comunicação com profinet para CLP S7 - 1200',
+                progNodeRedCloud: 'Utilização do Node-Red para envio de dados à nuvem com CLP S7-1200',
+                progPython: 'Lógica de Programação com ênfase em Python',
+                progEmbeddedEsp32: 'Sistema Embarcado com ESP32 e Micropython',
+                progDelphiArduino: 'Programação Delphi com Arduino e ESP32',
+                progMicropythonEsp32: 'Introdução a Micropython com ESP32',
+                progBlocksArduino: 'Programação em Blocos com Arduino',
+                progPyboard: 'Simulador PyBoard com Micropython',
+                progLogicC: 'Capacitação em Lógica de Programação Linguagem C',
+                progLogicCsharp: 'Capacitação em Lógica de Programação Linguagem C#',
+                progHtmlAccess: 'HTML, FontPage, Access, Digitalização, Internet',
+                formationAutomationTitle: 'Automação e Eletrônica',
+                autoArduinoClp: 'Utilização e Programação da plataforma Arduino como CLP',
+                autoPsim: 'Capacitação na Utilização do Software PSIM na Eletrônica de Potência',
+                autoIotTech: 'Introdução às técnicas e tecnologias de IoT (Internet das Coisas)',
+                autoArduinoClpTransform: 'Capacitação em Montagem e Transformação da plataforma ARDUINO em CLP Turma A',
+                autoFinder: 'Capacitação em Automação Predial Finder',
+                autoArduinoIntro: 'Introdução a programação com Arduino',
+                autoIotArduino: 'Capacitação em IOT com Arduino',
+                autoFluidSimIntro: 'Introdução ao FluidSim V.3.6',
+                autoFluidSimDiagram: 'Automação Utilizando Diagrama de Blocos através do Software FluidSim Festo',
+                autoFluidSimElectro: 'Simulação de Circuitos Eletropneumáticos no Software FluidSim Festo',
+                autoProteus: 'Proteus ISIS - Schematic Capture',
+                autoEsp32FirstSteps: 'Primeiros passos com ESP32',
+                autoRaspberryProjects: 'Capacitação em Desenvolvimento de Projetos com Raspberry - PBP',
+                autoRaspberryIntro: 'Introdução à Plataforma Raspberry',
+                autoElectricInstallations: 'Instalações elétricas básico - turma A',
+                autoCasioCalculator: 'Utilização de Calculadora Casio para área elétrica',
+                autoSchneiderElectric: 'Capacitação Schneider Eletric Turma C',
+                formationDesignEngineeringTitle: 'Design e Engenharia',
+                designEasyEda: 'Capacitação na utilização do Aplicativo EasyEda',
+                design3dPrintersSoftware: 'Softwares para impressoras 3D nas Etecs',
+                design3dPrinterTraining: 'Treinamento - Impressora 3D - Cliever - Turma C',
+                designRevitBasic: 'Autodesk Revit básico',
+                designAutocadBasic: 'Autodesk Autocad - básico',
+                designAutocad2d: 'Autocad 2016 2D Online',
+                designAutocadCapacitation: 'Capacitação em Autocad',
+                designFusionOnline: 'Fusion Online',
+                designRobotMiniSumo: 'Capacitação em Design de Robô - Modalidade Mini-Sumô',
+                formationMethodologiesToolsTitle: 'Metodologias e Ferramentas',
+                toolsPowerBI: 'Introdução ao Microsoft Power BI',
+                toolsRemoteWork: 'Como Trabalhar Remotamente: Boas Práticas de Home-Office',
+                toolsOnlineActivities: 'Utilização de programa livre para criar, publicar e corrigir atividades online',
+                toolsGit: 'Versionamento de Código (Git)',
+                toolsScrum: 'Metodologias Ágeis (Scrum)',
+                toolsStartupSchools: 'Projeto Startup in Schools',
+                formationOtherTitle: 'Outros',
+                otherNr10Recycle: 'Segurança em Instalações e Serviço com Eletricidade - NR10 Reciclagem',
+                otherNr10Basic: 'NR10 - Segurança em Instalações e Serviços em Eletricidade Módulo Básico',
+                otherEnglish: 'Curso de inglês - "English Online - EOL módulo 2"',
+                otherAuxiliaryTeacherCapacitation: 'I Capacitação de Auxiliar de Docente',
+                otherPreVestibular: 'Cursinho pré vestibular - ETAPA',
+                otherMicroWorldHours: 'Horas de Aulas Prestadas 300h e Horas de Estágio 1000h - Micro World Informática',
+
+                // Professional Experience Section
+                experienceTitle: 'Vivência Profissional',
+                expCoordElectroelectronicsTitle: 'Coordenador do Curso Técnico em Eletroeletrônica',
+                expCoordElectroelectronicsCompany: 'Etec de Embu | Fev de 2025 - o momento',
+                expCoordElectroelectronicsDesc: 'Atuação na coordenação do curso técnico, garantindo a qualidade do ensino e a gestão das atividades acadêmicas.',
+                expProfElectroelectronicsTitle: 'Professor em Eletroeletrônica',
+                expProfElectroelectronicsCompany: 'Etec de Embu | Jan de 2016 - o momento',
+                expProfElectroelectronicsResp1: 'Planejamento e execução da instalação e manutenção preventiva, preditiva e corretiva de equipamentos e instalações eletroeletrônicas industriais.',
+                expProfElectroelectronicsResp2: 'Projeto e instalação de sistemas de acionamento, automação e controle eletroeletrônicos.',
+                expProfElectroelectronicsResp3: 'Realização de medições e testes, além de elaboração, desenvolvimento e execução de projetos de instalações elétricas em edificações em baixa tensão.',
+                expProfElectroelectronicsResp4: 'Trabalho em conformidade com normas e procedimentos técnicos e de qualidade, segurança, higiene, saúde e preservação ambiental.',
+                expProfElectroelectronicsResp5: 'Proposição do uso eficiente da energia elétrica e elaboração de documentação técnica.',
+                expProfAutomationTitle: 'Professor no Curso de Automação Industrial',
+                expProfAutomationCompany: 'Etec de Embu | Fev de 2020 - Jul de 2024',
+                expProfAutomationResp1: 'Ensino de formação técnica em Automação Industrial integrada ao Ensino Médio.',
+                expProfAutomationResp2: 'Capacitação de alunos para projetar, instalar, programar, integrar e realizar manutenção em sistemas aplicados à automação e controle de processos industriais.',
+                expProfAutomationResp3: 'Análise de especificações de componentes e equipamentos de sistemas automatizados.',
+                expProfAutomationResp4: 'Coordenação de equipes de trabalho e avaliação da qualidade dos dispositivos e sistemas automatizados.',
+                expProfAutomationResp5: 'Programação, operação e manutenção de sistemas automatizados, respeitando normas técnicas de segurança.',
+                expCoordNovoTecTitle: 'Coordenador de Curso NovoTec em Automação Industrial',
+                expCoordNovoTecCompany: 'Etec de Embu | Fev de 2021 - Jan de 2023',
+                expCoordNovoTecDesc: 'Gestão e coordenação do programa NovoTec, focado na formação em Automação Industrial.',
+                expCoordLabEmbuTitle: 'Coordenador de Laboratório',
+                expCoordLabEmbuCompany: 'Etec de Embu | Fev de 2020 - Fev de 2021',
+                expCoordLabEmbuDesc: 'Organização, planejamento e execução de projetos voltados para o setor acadêmico e gestão de materiais de laboratório.',
+                expAuxDocenteEmbuTitle: 'Auxiliar Docente',
+                expAuxDocenteEmbuCompany: 'Centro Paula Souza (Etec de Embu) | Fev de 2020 - o momento',
+                expAuxDocenteEmbuDesc: 'Suporte às atividades de ensino, utilizando técnicas administrativas, experiência em sistemas elétricos e eletrônicos, manutenção de equipamentos, elaboração de laboratórios e noções de aulas expositivas.',
+                expDirectorAPMTitle: 'Diretor Executivo - APM',
+                expDirectorAPMCompany: 'Associação de Pais e Mestres da ETEC Guaracy Silveira | Jan de 2018 - Mai de 2022',
+                expDirectorAPMDesc: 'Responsável pela finalização de atas e outras atividades executivas da associação.',
+                expProfGuaracyTitle: 'Professor',
+                expProfGuaracyCompany: 'ETEC Guaracy Silveira | Mai de 2014 - Fev de 2020',
+                expProfGuaracyDesc: 'Professor do Ensino Técnico Integrado ao Médio em Eletrônica.',
+                expAuxDocenteGuaracyTitle: 'Auxiliar Docente',
+                expAuxDocenteGuaracyCompany: 'ETEC Guaracy Silveira | Jun de 2011 - Fev de 2020',
+                expAuxDocenteGuaracyDesc: 'Utilização de técnicas administrativas, experiência em sistemas elétricos e eletrônicos, manutenção de equipamentos, elaboração de laboratórios e noções de aulas expositivas.',
+                expCoordLabGuaracyTitle: 'Coordenador de Laboratório',
+                expCoordLabGuaracyCompany: 'ETEC Guaracy Silveira | Fev de 2015 - Dez de 2017',
+                expCoordLabGuaracyDesc: 'Gestão e organização dos materiais de laboratório.',
+                expCoordInternshipTitle: 'Coordenador de Estágio',
+                expCoordInternshipCompany: 'ETEC Guaracy Silveira | Jan de 2014 - Dez de 2015',
+                expCoordInternshipDesc: 'Coordenação e acompanhamento dos estágios dos alunos.',
+                expWarehouseAssistantTitle: 'Técnico Auxiliar de Almoxarife',
+                expWarehouseAssistantCompany: 'ETEC / Lins - Centro Paula Souza | Mar de 2010 - Mai de 2011',
+                expWarehouseAssistantDesc: 'Desenvolvimento de sistemas administrativos, noções de elaboração de documentação e trabalho em equipe.',
+                expInternTitle: 'Estagiário',
+                expInternCompany: 'ETEC / Lins - Centro Paula Souza | Jul de 2008 - Nov de 2008',
+                expInternDesc: 'Noções em manutenção, utilização de técnicas de sistemas eletrônicos, sistemática no ambiente de trabalho, utilização de ensino adquirido em sala de aula e desenvolvimento de experiências acadêmicas.',
+
+                // Personal Projects Section
+                personalProjectsTitle: 'Meus Projetos Pessoais',
+                personalProject1Title: 'Sistema IoT Residencial',
+                personalProject1Tech: 'Tecnologias: ESP32, Micropython, Node-RED, MQTT',
+                personalProject1Desc: 'Desenvolvimento de um sistema de automação residencial utilizando ESP32 para controle de iluminação e monitoramento de temperatura via plataforma IoT. Aprendizado em comunicação sem fio e integração de hardware/software.',
+                personalProject1Link: 'Ver Detalhes &rarr;',
+                personalProject2Title: 'Robô Seguidor de Linha',
+                personalProject2Tech: 'Tecnologias: Arduino, Sensores IR, Motores DC',
+                personalProject2Desc: 'Construção de um robô autônomo capaz de seguir uma linha preta em uma superfície branca. Foco na lógica de programação para controle de motores e leitura de sensores, aprimorando habilidades em robótica básica.',
+                personalProject2Link: 'Ver Detalhes &rarr;',
+                personalProject3Title: 'Estação Meteorológica com Raspberry Pi',
+                personalProject3Tech: 'Tecnologias: Raspberry Pi, Python, Sensores DHT11, BMP180',
+                personalProject3Desc: 'Criação de uma estação meteorológica que coleta dados de temperatura, umidade e pressão. Os dados são armazenados e visualizados, explorando a capacidade do Raspberry Pi para projetos de coleta de dados.',
+                personalProject3Link: 'Ver Detalhes &rarr;',
+
+                // Professional Projects Section
+                professionalProjectsTitle: 'Projetos Profissionais',
+                professionalProject1Title: 'Otimização de Processo Industrial',
+                professionalProject1ClientPeriod: 'Cliente: Indústria X | Período: Mar/2022 - Ago/2023',
+                professionalProject1Desc: 'Implementação de sistema de automação para otimizar a linha de produção, resultando em redução de 15% no tempo de ciclo e aumento de 10% na eficiência. Meu papel incluiu análise de requisitos, programação de CLP e supervisão da instalação.',
+                professionalProject1Link: 'Ver Case Study &rarr;',
+                professionalProject2Title: 'Desenvolvimento de Material Didático Interativo',
+                professionalProject2ClientPeriod: 'Cliente: ETEC de Embu | Período: Jan/2021 - Dez/2021',
+                professionalProject2Desc: 'Criação de módulos didáticos interativos para o curso técnico de Eletroeletrônica, utilizando simulações e exercícios práticos. A iniciativa melhorou o engajamento dos alunos em 20% e a compreensão de conceitos complexos.',
+                professionalProject2Link: 'Ver Detalhes &rarr;',
+                professionalProject3Title: 'Consultoria Técnica em Eletrônica para Startup',
+                professionalProject3ClientPeriod: 'Cliente: Startup ABC | Período: Set/2023 - Dez/2023',
+                professionalProject3Desc: 'Prestação de consultoria para uma startup no desenvolvimento de um protótipo eletrônico, auxiliando na seleção de componentes, design de circuito e otimização de custos. Contribuição para o lançamento bem-sucedido do MVP.',
+                professionalProject3Link: 'Ver Detalhes &rarr;',
+
+                // Contact Section
+                contactTitle: 'Entre em Contato',
+                contactIntro: 'Estou sempre aberto a novas oportunidades e colaborações. Sinta-se à vontade para me enviar uma mensagem!',
+                contactNameLabel: 'Nome Completo',
+                contactNamePlaceholder: 'Seu Nome',
+                contactEmailLabel: 'Seu E-mail',
+                contactEmailPlaceholder: 'seu.email@exemplo.com',
+                contactSubjectLabel: 'Assunto',
+                contactSubjectPlaceholder: 'Assunto da Mensagem',
+                contactMessageLabel: 'Mensagem',
+                contactMessagePlaceholder: 'Sua mensagem...',
+                contactSubmitBtn: 'Enviar Mensagem',
+                contactSocialMediaIntro: 'Ou me encontre nas redes sociais:',
+
+                // Footer
+                footerCopyright: '&copy; 2024 Willian Martins Cruz. Todos os direitos reservados.',
+                footerMadeWith: 'Feito com <span class="text-red-500">&hearts;</span> e Tailwind CSS.',
+
+                // Scroll to Top Button
+                scrollToTopBtn: 'Voltar ao Topo'
+            },
+            'en': {
+                // Navigation
+                headerName: 'Willian M. Cruz',
+                navPresentation: 'Presentation',
+                navFormation: 'Education',
+                navExperience: 'Professional Experience',
+                navPersonalProjects: 'Personal Projects',
+                navProfessionalProjects: 'Professional Projects',
+                navContact: 'Contact',
+
+                // Hero Section
+                heroTitle: 'Hello, I\'m Willian Martins Cruz',
+                heroSubtitle: 'Multidisciplinary Professional | Technology, Education, and Engineering',
+                heroBtnProjects: 'View Projects',
+                heroBtnContact: 'Contact Me',
+
+                // About Me Section
+                aboutMeTitle: 'About Me',
+                aboutMeP0: 'My journey is driven by the fusion of electronics and pedagogy, creating technological solutions that also educate and transform.',
+                aboutMeP1: 'I am a professional passionate about **technology, education, and innovation**, with a solid multidisciplinary background in **electronics, precision mechanics, and pedagogy**. My professional journey has been guided by the relentless pursuit of efficient solutions, the development of complex projects, and the **training of new talents**.',
+                aboutMeP2: 'My approach is based on **systemic thinking, continuous learning, and practical application of knowledge**. I believe that the combination of **technical and pedagogical skills** allows me to act comprehensively, from system development to team training.',
+                aboutMeP3: 'I am proficient in:',
+                aboutMeHardSkills: 'Hard Skills:',
+                aboutMeSoftSkills: 'Soft Skills:',
+                aboutMeP4: 'My goal is to **apply my technical and pedagogical knowledge in the development of innovative solutions and in the training of professionals**, contributing to technological and educational advancement.',
+
+                // Education Section
+                formationTitle: 'My Education',
+                formationHigherEducationTitle: 'Higher Education and Licensures',
+                formationPedagogyDegree: 'Bachelor\'s Degree in Pedagogy',
+                formationPedagogicalTraining: 'Special Pedagogical Training Program for Vocational Education at Secondary Level',
+                formationFullLicensure: 'Full Licensure',
+                formationPrecisionMechanics: 'Higher Technology Course in Precision Mechanics',
+                formationInformaticsEducation: 'Postgraduate Degree in Informatics in Education',
+                formationTechnicalBasicTitle: 'Technical and Basic Education',
+                formationElectronicsTechnical: 'Professional Technical Qualification in Electronics at Secondary Level',
+                formationElectronicsTechnician: 'Electronics Technician',
+                formationElectronicCircuits: 'Electronic Circuits Operator and Repairer',
+                formationElectroElectronicSystems: 'Electro-Electronic Systems Assembler and Installer',
+                formationHighSchool: 'High School Completed',
+                formationElementaryCycle2: 'Elementary School - Cycle II',
+                formationElementaryCycle1: 'Elementary School - Cycle I',
+                formationSpecializationTitle: 'Specialization Courses and Certifications',
+                formationProgrammingTitle: 'Programming and Development',
+                progCsharpEsp32: 'C# Programming with ESP32',
+                progNodeRedClp: 'Introduction to NODE-RED with Profinet communication for S7-1200 PLC',
+                progNodeRedCloud: 'Using Node-Red to send data to the cloud with S7-1200 PLC',
+                progPython: 'Logic Programming with emphasis on Python',
+                progEmbeddedEsp32: 'Embedded System with ESP32 and Micropython',
+                progDelphiArduino: 'Delphi Programming with Arduino and ESP32',
+                progMicropythonEsp32: 'Introduction to Micropython with ESP32',
+                progBlocksArduino: 'Block Programming with Arduino',
+                progPyboard: 'PyBoard Simulator with Micropython',
+                progLogicC: 'C Language Logic Programming Training',
+                progLogicCsharp: 'C# Language Logic Programming Training',
+                progHtmlAccess: 'HTML, FrontPage, Access, Digitization, Internet',
+                formationAutomationTitle: 'Automation and Electronics',
+                autoArduinoClp: 'Use and Programming of Arduino platform as PLC',
+                autoPsim: 'Training in the Use of PSIM Software in Power Electronics',
+                autoIotTech: 'Introduction to IoT (Internet of Things) techniques and technologies',
+                autoArduinoClpTransform: 'Training in Assembly and Transformation of ARDUINO platform into PLC Class A',
+                autoFinder: 'Finder Building Automation Training',
+                autoArduinoIntro: 'Introduction to Arduino programming',
+                autoIotArduino: 'IoT Training with Arduino',
+                autoFluidSimIntro: 'Introduction to FluidSim V.3.6',
+                autoFluidSimDiagram: 'Automation Using Block Diagram through FluidSim Festo Software',
+                autoFluidSimElectro: 'Simulation of Electropneumatic Circuits in FluidSim Festo Software',
+                autoProteus: 'Proteus ISIS - Schematic Capture',
+                autoEsp32FirstSteps: 'First steps with ESP32',
+                autoRaspberryProjects: 'Training in Project Development with Raspberry - PBP',
+                autoRaspberryIntro: 'Introduction to Raspberry Platform',
+                autoElectricInstallations: 'Basic Electrical Installations - Class A',
+                autoCasioCalculator: 'Use of Casio Calculator for electrical area',
+                autoSchneiderElectric: 'Schneider Electric Training Class C',
+                formationDesignEngineeringTitle: 'Design and Engineering',
+                designEasyEda: 'Training in the use of EasyEda Application',
+                design3dPrintersSoftware: '3D Printer Software at Etecs',
+                design3dPrinterTraining: 'Training - 3D Printer - Cliever - Class C',
+                designRevitBasic: 'Autodesk Revit basic',
+                designAutocadBasic: 'Autodesk Autocad - basic',
+                designAutocad2d: 'Autocad 2016 2D Online',
+                designAutocadCapacitation: 'Autocad Training',
+                designFusionOnline: 'Fusion Online',
+                designRobotMiniSumo: 'Robot Design Training - Mini-Sumo Mode',
+                formationMethodologiesToolsTitle: 'Metodologies and Tools',
+                toolsPowerBI: 'Introduction to Microsoft Power BI',
+                toolsRemoteWork: 'How to Work Remotely: Good Home-Office Practices',
+                toolsOnlineActivities: 'Use of free software to create, publish and correct online activities',
+                toolsGit: 'Code Versioning (Git)',
+                toolsScrum: 'Agile Methodologies (Scrum)',
+                toolsStartupSchools: 'Startup in Schools Project',
+                formationOtherTitle: 'Others',
+                otherNr10Recycle: 'Safety in Electrical Installations and Services - NR10 Recertification',
+                otherNr10Basic: 'NR10 - Safety in Electrical Installations and Services Basic Module',
+                otherEnglish: 'English Course - "English Online - EOL module 2"',
+                otherAuxiliaryTeacherCapacitation: 'I Auxiliary Teacher Training',
+                otherPreVestibular: 'Pre-university course - ETAPA',
+                otherMicroWorldHours: '300h of Classes Taught and 1000h of Internship - Micro World Informatics',
+
+                // Professional Experience Section
+                experienceTitle: 'Professional Experience',
+                expCoordElectroelectronicsTitle: 'Coordinator of the Electro-Electronic Technical Course',
+                expCoordElectroelectronicsCompany: 'Etec de Embu | Feb 2025 - present',
+                expCoordElectroelectronicsDesc: 'Coordination of the technical course, ensuring teaching quality and management of academic activities.',
+                expProfElectroelectronicsTitle: 'Professor of Electro-Electronics',
+                expProfElectroelectronicsCompany: 'Etec de Embu | Jan 2016 - present',
+                expProfElectroelectronicsResp1: 'Planning and execution of installation and preventive, predictive, and corrective maintenance of industrial electro-electronic equipment and installations.',
+                expProfElectroelectronicsResp2: 'Design and installation of electro-electronic drive, automation, and control systems.',
+                expProfElectroelectronicsResp3: 'Execution of measurements and tests, as well as elaboration, development, and execution of electrical installation projects in low-voltage buildings.',
+                expProfElectroelectronicsResp4: 'Work in compliance with technical and quality standards and procedures, safety, hygiene, health, and environmental preservation.',
+                expProfElectroelectronicsResp5: 'Proposal of efficient use of electrical energy and elaboration of technical documentation.',
+                expProfAutomationTitle: 'Professor in Industrial Automation Course',
+                expProfAutomationCompany: 'Etec de Embu | Feb 2020 - Jul 2024',
+                expProfAutomationResp1: 'Teaching technical training in Industrial Automation integrated with High School.',
+                expProfAutomationResp2: 'Training students to design, install, program, integrate, and perform maintenance on systems applied to industrial process automation and control.',
+                expProfAutomationResp3: 'Analysis of specifications of components and equipment of automated systems.',
+                expProfAutomationResp4: 'Coordination of work teams and evaluation of the quality of automated devices and systems.',
+                expProfAutomationResp5: 'Programming, operation, and maintenance of automated systems, respecting technical safety standards.',
+                expCoordNovoTecTitle: 'Coordinator of NovoTec Course in Industrial Automation',
+                expCoordNovoTecCompany: 'Etec de Embu | Feb 2021 - Jan 2023',
+                expCoordNovoTecDesc: 'Management and coordination of the NovoTec program, focused on Industrial Automation training.',
+                expCoordLabEmbuTitle: 'Laboratory Coordinator',
+                expCoordLabEmbuCompany: 'Etec de Embu | Feb 2020 - Feb 2021',
+                expCoordLabEmbuDesc: 'Organization, planning, and execution of projects aimed at the academic sector and management of laboratory materials.',
+                expAuxDocenteEmbuTitle: 'Auxiliary Teacher',
+                expAuxDocenteEmbuCompany: 'Centro Paula Souza (Etec de Embu) | Feb 2020 - present',
+                expAuxDocenteEmbuDesc: 'Support for teaching activities, using administrative techniques, experience in electrical and electronic systems, equipment maintenance, laboratory development, and notions of expository classes.',
+                expDirectorAPMTitle: 'Executive Director - APM',
+                expDirectorAPMCompany: 'Parents and Teachers Association of ETEC Guaracy Silveira | Jan 2018 - May 2022',
+                expDirectorAPMDesc: 'Responsible for finalizing minutes and other executive activities of the association.',
+                expProfGuaracyTitle: 'Professor',
+                expProfGuaracyCompany: 'ETEC Guaracy Silveira | May 2014 - Feb 2020',
+                expProfGuaracyDesc: 'Professor of Technical Education Integrated with High School in Electronics.',
+                expAuxDocenteGuaracyTitle: 'Auxiliary Teacher',
+                expAuxDocenteGuaracyCompany: 'ETEC Guaracy Silveira | Jun 2011 - Feb 2020',
+                expAuxDocenteGuaracyDesc: 'Use of administrative techniques, experience in electrical and electronic systems, equipment maintenance, laboratory development, and notions of expository classes.',
+                expCoordLabGuaracyTitle: 'Laboratory Coordinator',
+                expCoordLabGuaracyCompany: 'ETEC Guaracy Silveira | Feb 2015 - Dec 2017',
+                expCoordLabGuaracyDesc: 'Management and organization of laboratory materials.',
+                expCoordInternshipTitle: 'Internship Coordinator',
+                expCoordInternshipCompany: 'ETEC Guaracy Silveira | Jan 2014 - Dec 2015',
+                expCoordInternshipDesc: 'Coordination and monitoring of student internships.',
+                expWarehouseAssistantTitle: 'Auxiliary Warehouse Technician',
+                expWarehouseAssistantCompany: 'ETEC / Lins - Centro Paula Souza | Mar 2010 - May 2011',
+                expWarehouseAssistantDesc: 'Development of administrative systems, notions of documentation elaboration, and teamwork.',
+                expInternTitle: 'Intern',
+                expInternCompany: 'ETEC / Lins - Centro Paula Souza | Jul 2008 - Nov 2008',
+                expInternDesc: 'Notions in maintenance, use of electronic systems techniques, systematic in the work environment, use of knowledge acquired in the classroom and development of academic experiences.',
+
+                // Personal Projects Section
+                personalProjectsTitle: 'My Personal Projects',
+                personalProject1Title: 'Home IoT System',
+                personalProject1Tech: 'Technologies: ESP32, Micropython, Node-RED, MQTT',
+                personalProject1Desc: 'Development of a home automation system using ESP32 for lighting control and temperature monitoring via an IoT platform. Learning about wireless communication and hardware/software integration.',
+                personalProject1Link: 'View Details &rarr;',
+                personalProject2Title: 'Line Follower Robot',
+                personalProject2Tech: 'Technologies: Arduino, IR Sensors, DC Motors',
+                personalProject2Desc: 'Construction of an autonomous robot capable of following a black line on a white surface. Focus on programming logic for motor control and sensor reading, improving basic robotics skills.',
+                personalProject2Link: 'View Details &rarr;',
+                personalProject3Title: 'Weather Station with Raspberry Pi',
+                personalProject3Tech: 'Technologies: Raspberry Pi, Python, DHT11, BMP180 Sensors',
+                personalProject3Desc: 'Creation of a weather station that collects temperature, humidity, and pressure data. Data is stored and visualized, exploring the Raspberry Pi\'s capabilities for data collection projects.',
+                personalProject3Link: 'View Details &rarr;',
+
+                // Professional Projects Section
+                professionalProjectsTitle: 'Professional Projects',
+                professionalProject1Title: 'Industrial Process Optimization',
+                personalProject1ClientPeriod: 'Client: Industry X | Period: Mar/2022 - Aug/2023',
+                personalProject1Desc: 'Implementation of an automation system to optimize the production line, resulting in a 15% reduction in cycle time and a 10% increase in efficiency. My role included requirements analysis, PLC programming, and installation supervision.',
+                personalProject1Link: 'View Case Study &rarr;',
+                personalProject2Title: 'Interactive Didactic Material Development',
+                personalProject2ClientPeriod: 'Client: ETEC de Embu | Period: Jan/2021 - Dec/2021',
+                personalProject2Desc: 'Creation of interactive didactic modules for the Electro-Electronic technical course, using simulations and practical exercises. The initiative improved student engagement by 20% and the comprehension of complex concepts.',
+                personalProject2Link: 'View Details &rarr;',
+                personalProject3Title: 'Technical Consulting in Electronics for Startup',
+                personalProject3ClientPeriod: 'Client: Startup ABC | Period: Sep/2023 - Dec/2023',
+                personalProject3Desc: 'Provided consulting for a startup in the development of an electronic prototype, assisting in component selection, circuit design, and cost optimization. Contributed to the successful launch of the MVP.',
+                personalProject3Link: 'View Details &rarr;',
+
+                // Contact Section
+                contactTitle: 'Contact Me',
+                contactIntro: 'I am always open to new opportunities and collaborations. Feel free to send me a message!',
+                contactNameLabel: 'Full Name',
+                contactNamePlaceholder: 'Your Name',
+                contactEmailLabel: 'Your Email',
+                contactEmailPlaceholder: 'your.email@example.com',
+                contactSubjectLabel: 'Subject',
+                contactSubjectPlaceholder: 'Message Subject',
+                contactMessageLabel: 'Message',
+                contactMessagePlaceholder: 'Your message...',
+                contactSubmitBtn: 'Send Message',
+                contactSocialMediaIntro: 'Or find me on social media:',
+
+                // Footer
+                footerCopyright: '&copy; 2024 Willian Martins Cruz. All rights reserved.',
+                footerMadeWith: 'Made with <span class="text-red-500">&hearts;</span> and Tailwind CSS.',
+
+                // Scroll to Top Button
+                scrollToTopBtn: 'Back to Top'
+            }
+        };
+
+        // Function to apply translations
+        function applyLanguage(lang) {
+            document.querySelectorAll('[data-lang-key]').forEach(element => {
+                const key = element.getAttribute('data-lang-key');
+                if (translations[lang][key]) {
+                    // Handle bold markdown in text content
+                    let translatedText = translations[lang][key];
+                    if (element.tagName === 'P' || element.tagName === 'LI' || element.tagName === 'SPAN') {
+                        translatedText = translatedText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    }
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.placeholder = translatedText.replace(/<\/?strong>/g, ''); // Remove bold for placeholders
+                    } else {
+                        element.innerHTML = translatedText;
+                    }
+                }
+            });
+            // Update the HTML lang attribute
+            document.documentElement.lang = lang;
+            // Update the page title
+            document.title = translations[lang]['headerName'] + ' | ' + (lang === 'pt' ? 'Portfólio Profissional' : 'Professional Portfolio');
+        }
+
+        // Function to set up language toggle button
+        function setupLanguageToggle() {
+            const languageToggleButton = document.getElementById('language-toggle');
+            languageToggleButton.addEventListener('click', () => {
+                currentLanguage = (currentLanguage === 'pt' ? 'en' : 'pt');
+                localStorage.setItem('portfolioLanguage', currentLanguage);
+                applyLanguage(currentLanguage);
+            });
+        }
+
+        // Function to set up mobile menu
+        function setupMobileMenu() {
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+            mobileMenuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+        }
+
+        // Function to set up scroll to top button
+        function setupScrollToTopButton() {
+            const scrollToTopBtn = document.getElementById('scroll-to-top-btn');
+
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollToTopBtn.style.display = 'block';
+                } else {
+                    scrollToTopBtn.style.display = 'none';
+                }
+            });
+
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        // Function to set up contact form
+        function setupContactForm() {
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                formMessage.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+                formMessage.classList.add('bg-green-100', 'text-green-700');
+                formMessage.textContent = 'Mensagem enviada com sucesso! Em breve entrarei em contato.';
+
+                contactForm.reset();
+
+                setTimeout(() => {
+                    formMessage.classList.add('hidden');
+                }, 5000);
+            });
+        }
+
+        // Main initialization function
+        function init() {
+            // Loads saved language or sets to Portuguese by default
+            let currentLanguage = localStorage.getItem('portfolioLanguage') || 'pt';
+            applyLanguage(currentLanguage);
+
+            setupLanguageToggle();
+            setupMobileMenu();
+            setupScrollToTopButton();
+            setupContactForm();
+
+            // Adds a fade-in effect to the hero section
+            const heroSection = document.getElementById('apresentacao');
+            heroSection.querySelectorAll('.animate-fade-in-down, .animate-fade-in-up, .animate-fade-in').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+            });
+
+            setTimeout(() => {
+                heroSection.querySelector('.animate-fade-in-down').style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                heroSection.querySelector('.animate-fade-in-down').style.opacity = '1';
+                heroSection.querySelector('.animate-fade-in-down').style.transform = 'translateY(0)';
+            }, 100);
+
+            setTimeout(() => {
+                heroSection.querySelector('.animate-fade-in-up').style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+                heroSection.querySelector('.animate-fade-in-up').style.opacity = '1';
+                heroSection.querySelector('.animate-fade-in-up').style.transform = 'translateY(0)';
+            }, 300);
+
+            setTimeout(() => {
+                heroSection.querySelector('.animate-fade-in').style.transition = 'opacity 1s ease-out';
+                heroSection.querySelector('.animate-fade-in').style.opacity = '1';
+            }, 500);
+        }
+
+        // Initializes AOS and the rest of the script when the window loads
+        window.onload = init;
+    </script>
+</body>
+</html>
